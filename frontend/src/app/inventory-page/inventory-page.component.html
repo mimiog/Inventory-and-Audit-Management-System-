@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inventory</title>
+    </head>
+    <body>
+        <mat-sidenav-container class="nav-container">
+            <mat-sidenav class="nav-bar" opened="" mode="side">
+                <button id="home" routerLink="/home" routerLinkActive="active"><nav>Home</nav></button>
+            </mat-sidenav>
+            <mat-sidenav-content></mat-sidenav-content>
+        </mat-sidenav-container>
+        <div class="container" id="searchBar">
+            <input type="search" name="search" id="search">
+            <!-- <mat-form-field class="select" appearance="fill">
+                <mat-select>
+                    <mat-option>General</mat-option>
+                    <mat-option>ID #</mat-option>
+                    <mat-option>Name</mat-option>
+                    <mat-option>Payment #</mat-option>
+                    <mat-option>Description</mat-option>
+                </mat-select>
+            </mat-form-field> -->
+        </div>
+        <div id="results">
+            <table>
+                <!--insert results of search from database-->
+            </table>
+        </div>
+        <footer>
+            <!--display selected inventory item information-->
+        </footer>
+    </body>
+</html>
