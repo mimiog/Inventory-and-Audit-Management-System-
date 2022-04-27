@@ -1,4 +1,8 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { Repository, UpdateResult,DeleteResult} from 'typeorm';
 import { CreateInvItemDto } from 'src/dto/create-invitem.dto';

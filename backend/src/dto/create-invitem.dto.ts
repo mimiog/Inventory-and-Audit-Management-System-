@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
 import { IsDefined, IsString, IsNotEmpty, Length, IsNumber, isDefined, IsDate } from "class-validator";
 
 export class CreateInvItemDto{
@@ -58,15 +60,5 @@ export class CreateInvItemDto{
     @IsNumber()
     @IsNotEmpty()
     lifespan:number
-    
-
-
-
-
-
-
-
-    
-
 
 }

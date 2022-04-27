@@ -1,4 +1,8 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable prettier/prettier */
 import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
 import { InvItemService } from './inv-item.service';
 import { invItem } from 'src/entities/invItem.entity';
