@@ -1,23 +1,26 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { Repository, UpdateResult,DeleteResult} from 'typeorm';
-import { invItem } from 'src/entities/invItem.entity';
+import { CreateInvItemDto } from 'src/dto/create-invitem.dto';
+import { UpdateInvItemDto } from 'src/dto/update-invitem.dto';
+import { invItem } from 'src/entities/invItem.entity'; 
 import { InjectRepository } from '@nestjs/typeorm';
+
+
 @Injectable()
 export class InvItemService {
     constructor (
         @InjectRepository(invItem)
         private invItemRepository: Repository<invItem>
     ) { }
-    async create(contact: invItem): Promise<invItem> {
-        return await this.invItemRepository.save(contact);
+    async create(createInvItemDto: CreateInvItemDto): Promise<void> {
+        const invEntity = await this.invItemRepository.create(createInvItemDto);
+        await this.invItemRepository.save(invEntity);
     }
     async  readAll(): Promise<invItem[]> {
         return await this.invItemRepository.find();
     }
-    async update(contact: invItem): Promise<UpdateResult> {
-
-        return await this.invItemRepository.update(contact.id,contact);
+    async update(createInvItemDto: CreateInvItemDto): Promise<void> {
     }
     async delete(id): Promise<DeleteResult> {
         return await this.invItemRepository.delete(id);
