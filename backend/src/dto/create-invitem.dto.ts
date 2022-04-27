@@ -2,6 +2,7 @@ import { IsDefined, IsString, IsNotEmpty, Length, IsNumber, isDefined, IsDate } 
 
 export class CreateInvItemDto{
 
+    
     @IsString()
     @IsDefined()
     @IsNotEmpty()
@@ -11,32 +12,32 @@ export class CreateInvItemDto{
     @IsNumber()
     @IsNotEmpty()
     @IsDefined()
-    payment_id:Number
+    payment_id:number
 
     @IsNumber()
     @IsNotEmpty()
     @IsDefined()
-    amount:Number
+    amount:number
 
     @IsDefined()
     @IsNotEmpty()
     @IsString()
-    department:String
+    department:string
 
     @IsDefined()
     @IsString()
     @IsNotEmpty()
-    location:String
+    location:string
 
     @IsDefined()
     @IsString()
     @IsNotEmpty()
-    description:String
+    description:string
 
     @IsDefined()
     @IsString()
     @IsNotEmpty()
-    category:String
+    category:string
 
     @IsDefined()
     @IsDate()
@@ -46,17 +47,17 @@ export class CreateInvItemDto{
     @IsDefined()
     @IsNumber()
     @IsNotEmpty()
-    unit_price:Number
+    unit_price:number
 
     @IsDefined()
     @IsString()
     @IsNotEmpty()
-    memo:String
+    memo:string
     
     @IsDefined()
     @IsNumber()
     @IsNotEmpty()
-    lifespan:Number
+    lifespan:number
     
 
 
