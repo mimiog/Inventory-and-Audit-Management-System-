@@ -3,6 +3,7 @@ import { Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
 
 @Entity()
 export class invItem {
+    
     @PrimaryGeneratedColumn()
     id:number;
 
@@ -37,5 +38,5 @@ export class invItem {
     memo: string;
 
     @Column()
-    lifespan: string;
+    lifespan: Number;
 }
