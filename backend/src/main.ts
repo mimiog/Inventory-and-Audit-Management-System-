@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 /* eslint-disable prettier/prettier */
->>>>>>> origin/Mimi
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 

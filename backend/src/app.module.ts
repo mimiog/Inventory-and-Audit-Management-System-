@@ -8,6 +8,7 @@ import { InvItemService } from './inv-item/inv-item.service';
 import { InvItemController } from './inv-item/inv-item.controller';
 
 
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -16,7 +17,6 @@ import { InvItemController } from './inv-item/inv-item.controller';
       database:'inventoryDB',
       username:'postgres',
       password:'Password1234',
-      //entities:[invItem],
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }
