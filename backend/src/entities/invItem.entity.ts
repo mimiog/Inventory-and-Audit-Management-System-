@@ -1,8 +1,5 @@
 /* eslint-disable prettier/prettier */
-<<<<<<< HEAD
-=======
 /* eslint-disable @typescript-eslint/no-unused-vars */
->>>>>>> origin/Mimi
 import { Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
 
 @Entity()
@@ -42,9 +39,5 @@ export class invItem {
     memo: string;
 
     @Column()
-<<<<<<< HEAD
-    lifespan: Number;
-=======
     lifespan: number;
->>>>>>> origin/Mimi
 }
