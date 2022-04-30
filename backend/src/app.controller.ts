@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 /* eslint-disable prettier/prettier */
->>>>>>> origin/Mimi
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 

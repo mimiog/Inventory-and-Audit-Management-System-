@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 /* eslint-disable prettier/prettier */
->>>>>>> origin/Mimi
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
