@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable prettier/prettier */
+>>>>>>> origin/Mimi
 import { Test, TestingModule } from '@nestjs/testing';
 import { InvItemService } from './inv-item.service';
 

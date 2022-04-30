@@ -10,19 +10,19 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
   API_SERVER = "http://localhost:58961/";
 
-  public readContacts(){
+  public readInvItem(){
     return this.httpClient.get<InvItem[]>(`${this.API_SERVER}/invItem`);
   }
 
-  public createContact(contact: InvItem){
+  public createInvItem(contact: InvItem){
     return this.httpClient.post<InvItem>(`${this.API_SERVER}/invItem/create`, contact);
   }
 
-  public updateContact(contact: InvItem){
+  public updateInvItem(contact: InvItem){
     return this.httpClient.put<InvItem>(`${this.API_SERVER}/invItem/${contact.id}/update`, contact);
   }
 
-  public deleteContact(id: number){
+  public deleteInvItem(id: number){
     return this.httpClient.delete(`${this.API_SERVER}/invItem/${id}/delete`);
   }
 
