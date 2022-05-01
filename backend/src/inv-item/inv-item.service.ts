@@ -22,11 +22,24 @@ export class InvItemService {
         await this.invItemRepository.save(invEntity);
     }
     async  readAll(): Promise<invItem[]> {
-        return await this.invItemRepository.find();
+        return await this.invItemRepository.find(); //Select * from invItem
     }
-    async update(createInvItemDto: CreateInvItemDto): Promise<void> {
+
+    async readOneById(id:number): Promise<invItem> {  //Select * from invItem where id = id passed in param
+        try {
+          const item = await this.invItemRepository.findOneOrFail(id); 
+          return item; 
+        } catch (error) {
+         throw error;   
+        }
     }
-    async delete(id): Promise<DeleteResult> {
-        return await this.invItemRepository.delete(id);
+    async updateInvItem(id:number): Promise<invItem> {
+        const item = await this.readOneById(id);
+        return; //Still need to work on this 
+        
+    };
+    async delete(id): Promise<invItem>{
+        const itemToDelete = await this.readOneById(id);
+        return this.invItemRepository.remove(itemToDelete);
     }
 }

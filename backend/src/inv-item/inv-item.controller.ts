@@ -21,6 +21,10 @@ export class InvItemController {
       return this.invItemService.create(createInventoryItem);
     }
     
+    @Get()
+    readone(id: number):  Promise<invItem>{
+      return this.invItemService.readOneById(id);
+    }
     
     @Get()
     read(): Promise<invItem[]> {
@@ -29,7 +33,7 @@ export class InvItemController {
 
     @Patch(':id')
     async update(@Param('id') id:number, @Body() createInventoryItem:CreateInvItemDto): Promise<any> {
-      return "Is it working!";
+      return "Inventory item updated"
     }  
     
     @Delete(':id')
