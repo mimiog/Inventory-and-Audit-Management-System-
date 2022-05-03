@@ -13,16 +13,18 @@ import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
 import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import { AuditsPageComponent } from './audits-page/audits-page.component';
+import { AddnewitemComponent } from './addnewitem/addnewitem.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     AdminHomePageComponent,
     DirHomePageComponent,
     AudHomePageComponent,
     InventoryPageComponent,
-    AuditsPageComponent
-  ],
+    AuditsPageComponent,
+      AddnewitemComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
