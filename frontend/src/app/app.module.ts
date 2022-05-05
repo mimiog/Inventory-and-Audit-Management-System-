@@ -31,6 +31,7 @@ import { AuditsPageComponent } from './audits-page/audits-page.component';
     MatInputModule,
     MatSelectModule,
     HttpClientModule,
+    MatSelectModule,
     FormsModule
   ],
   providers: [],
