@@ -5,7 +5,7 @@ import { Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
 @Entity()
 export class invItem {
     
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn({type:"int"})
     id:number;
 
     @Column()

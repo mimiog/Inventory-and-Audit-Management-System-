@@ -3,7 +3,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable prettier/prettier */
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Repository, UpdateResult,DeleteResult} from 'typeorm';
 import { CreateInvItemDto } from 'src/dto/create-invitem.dto';
 import { UpdateInvItemDto } from 'src/dto/update-invitem.dto';
@@ -25,7 +25,7 @@ export class InvItemService {
         return await this.invItemRepository.find(); //Select * from invItem
     }
 
-    async readOneById(id:number): Promise<invItem> {  //Select * from invItem where id = id passed in param
+    async readOneById(id:string): Promise<invItem> {  //Select * from invItem where id = id passed in param
         try {
           const item = await this.invItemRepository.findOneOrFail(id); 
           return item; 
@@ -33,12 +33,17 @@ export class InvItemService {
          throw error;   
         }
     }
-    async updateInvItem(id:number): Promise<invItem> {
+    async updateInvItem(id:string, updateInvItemDto:UpdateInvItemDto): Promise<void> {
         const item = await this.readOneById(id);
-        return; //Still need to work on this 
         
+        if(!item) {
+            throw new NotFoundException('Item with id number ${id}, does not exist.');
+        }
+
+        await this.invItemRepository.update(id, updateInvItemDto);
     };
-    async delete(id): Promise<invItem>{
+    
+    async delete(id:string): Promise<invItem>{
         const itemToDelete = await this.readOneById(id);
         return this.invItemRepository.remove(itemToDelete);
     }
