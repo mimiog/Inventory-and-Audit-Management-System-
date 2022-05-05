@@ -8,21 +8,21 @@ import { InvItem } from './inv-item';
 export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
-  API_SERVER = "http://localhost:58961/";
+  API_SERVER = "http://127.0.0.1:3000/";
 
-  public readInvItem(){
+  public readItem(){
     return this.httpClient.get<InvItem[]>(`${this.API_SERVER}/invItem`);
   }
 
-  public createInvItem(contact: InvItem){
+  public createItem(contact: InvItem){
     return this.httpClient.post<InvItem>(`${this.API_SERVER}/invItem/create`, contact);
   }
 
-  public updateInvItem(contact: InvItem){
+  public updateItem(contact: InvItem){
     return this.httpClient.put<InvItem>(`${this.API_SERVER}/invItem/${contact.id}/update`, contact);
   }
 
-  public deleteInvItem(id: number){
+  public deleteItem(id: number){
     return this.httpClient.delete(`${this.API_SERVER}/invItem/${id}/delete`);
   }
 

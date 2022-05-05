@@ -7,3 +7,6 @@
 
 
 - When pushing/commiting, please push or commit to the branch with your name. 
+
+- 04/26/2022, 12:44 AM-ish: Inventory updated with routing and homepage for frontend. 
+
