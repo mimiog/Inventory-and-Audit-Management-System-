@@ -21,7 +21,7 @@ export class InvItemController {
       return this.invItemService.create(createInventoryItem);
     }
     
-    @Get()
+    @Get(':id/getOne')
     readone(id: string):  Promise<invItem>{
       return this.invItemService.readOneById(id);
     }
@@ -31,12 +31,12 @@ export class InvItemController {
         return this.invItemService.readAll();
     }
 
-    @Patch(':id')
+    @Patch(':id/update')
     async update(@Param('id') id:string, @Body() updateInvItemDTO:UpdateInvItemDto): Promise<void> {
       await this.invItemService.updateInvItem(id, updateInvItemDTO);
     }  
     
-    @Delete(':id')
+    @Delete(':id/delete')
     async delete(@Param('id') id: string) {
       return this.invItemService.delete(id);
     }
