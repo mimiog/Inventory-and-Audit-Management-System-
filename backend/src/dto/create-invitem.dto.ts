@@ -54,6 +54,11 @@ export class CreateInvItemDto{
     @IsDefined()
     @IsString()
     @IsNotEmpty()
+    auditable: string
+
+    @IsDefined()
+    @IsString()
+    @IsNotEmpty()
     memo:string
     
     @IsDefined()

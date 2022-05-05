@@ -36,6 +36,9 @@ export class invItem {
     unit_price: number;
 
     @Column()
+    auditable: string;
+
+    @Column()
     memo: string;
 
     @Column()
