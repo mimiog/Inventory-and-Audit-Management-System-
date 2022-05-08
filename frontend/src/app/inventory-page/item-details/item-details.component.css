@@ -5,7 +5,11 @@ div {
 }
 
 td {
-    padding: 10px;
+    padding: 7px;
+}
+
+td:nth-child(2){
+    text-align: right;
 }
 
 input[type='button'], button {

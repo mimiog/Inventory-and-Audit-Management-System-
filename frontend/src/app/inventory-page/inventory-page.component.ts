@@ -21,7 +21,7 @@ export interface InventoryItem {
 
 var itemData: InventoryItem[] = [
   {
-    id: 4372948,
+    id: 1,
     name: 'string',
     payment_id: 43298940,
     amount: 4839,
@@ -35,7 +35,7 @@ var itemData: InventoryItem[] = [
     lifespan: 'string'
   },
   {
-    id: 4372948,
+    id: 2,
     name: 'string',
     payment_id: 43298940,
     amount: 4839,
@@ -49,7 +49,7 @@ var itemData: InventoryItem[] = [
     lifespan: 'string'
   },
   {
-    id: 4372948,
+    id: 3,
     name: 'string',
     payment_id: 43298940,
     amount: 4839,
@@ -266,8 +266,9 @@ export class InventoryPageComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(ItemDetailsComponent, {
-      data: InvItem
+      data: this.clickedRow
     });
+
   }
 
 
@@ -277,5 +278,6 @@ export class InventoryPageComponent implements OnInit {
   // Display array in table on Inventory Page
   displayedColumns: string[] = ['id', 'name', 'amount'];
   dataSource = itemData;
+  clickedRow = new Set<InvItem>()
 
 }
