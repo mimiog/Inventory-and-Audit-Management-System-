@@ -14,6 +14,7 @@ import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import { AuditsPageComponent } from './audits-page/audits-page.component';
 import { EditItemsComponent } from './edit-items/edit-items.component';
+import { AddItemsComponent } from './add-items/add-items.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EditItemsComponent } from './edit-items/edit-items.component';
     AudHomePageComponent,
     InventoryPageComponent,
     AuditsPageComponent,
-    EditItemsComponent
+    EditItemsComponent,
+    AddItemsComponent
   ],
   imports: [
     BrowserModule,
