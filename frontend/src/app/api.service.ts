@@ -8,7 +8,7 @@ import { InvItem } from './inv-item';
 export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
-  API_SERVER = "http://localhost:58961/";
+  API_SERVER = "http://127.0.0.1:3000/";
 
   public readContacts(){
     return this.httpClient.get<InvItem[]>(`${this.API_SERVER}/invItem`);

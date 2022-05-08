@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +14,9 @@ import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
 import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import { AuditsPageComponent } from './audits-page/audits-page.component';
+import { ItemDetailsComponent } from './inventory-page/item-details/item-details.component';
+import { RouterModule } from '@angular/router';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { AuditsPageComponent } from './audits-page/audits-page.component';
     DirHomePageComponent,
     AudHomePageComponent,
     InventoryPageComponent,
-    AuditsPageComponent
+    AuditsPageComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +35,11 @@ import { AuditsPageComponent } from './audits-page/audits-page.component';
     MatSidenavModule,
     MatInputModule,
     MatSelectModule,
+    MatTableModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
