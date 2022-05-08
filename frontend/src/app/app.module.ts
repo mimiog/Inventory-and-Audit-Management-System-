@@ -13,7 +13,7 @@ import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
 import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import { AuditsPageComponent } from './audits-page/audits-page.component';
-import { EditItemsComponent } from './edit-items/edit-items.component';
+import { EditItemsComponent } from './inventory-page/edit-items/edit-items.component';
 import { AddItemsComponent } from './add-items/add-items.component';
 
 @NgModule({
