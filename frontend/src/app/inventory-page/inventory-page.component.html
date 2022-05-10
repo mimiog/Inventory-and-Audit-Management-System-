@@ -12,23 +12,35 @@
         </mat-sidenav-container>
         <div class="container" id="searchBar">
             <input type="search" name="search" id="search">
-            <!-- <mat-form-field class="select" appearance="fill">
-                <mat-select>
-                    <mat-option>General</mat-option>
-                    <mat-option>ID #</mat-option>
-                    <mat-option>Name</mat-option>
-                    <mat-option>Payment #</mat-option>
-                    <mat-option>Description</mat-option>
-                </mat-select>
-            </mat-form-field> -->
+            <input type="button" name="go" id="go" value="Search" (click)="searchFunc()">
         </div>
         <div id="results">
-            <table>
-                <!--insert results of search from database-->
-            </table>
+            <table mat-table [dataSource]="dataSource" class="result-table">
+                <!-- ID Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef>ID #</th>
+                  <td mat-cell *matCellDef="let element">{{element.id}}</td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef>Name</th>
+                  <td mat-cell *matCellDef="let element">{{element.name}}</td>
+                </ng-container>
+
+                <!-- Quantity Column -->
+                <ng-container matColumnDef="amount">
+                    <th mat-header-cell *matHeaderCellDef>Amount</th>
+                    <td mat-cell *matCellDef="let element">{{element.amount}}</td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr
+                    mat-row
+                    (click)="clickedRow = row; openDialog();"
+                    *matRowDef="let row; columns: displayedColumns;"
+                ></tr>
+              </table>
         </div>
-        <footer>
-            <!--display selected inventory item information-->
-        </footer>
     </body>
 </html>

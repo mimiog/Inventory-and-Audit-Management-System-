@@ -38,7 +38,6 @@ body {
 }
 
 #search {
-    position: absolute;
     width: 40%;
     height: 7vh;
     left: 225px;
@@ -48,10 +47,33 @@ body {
     border-radius: 8px;
     outline: none;
     font-size: xx-large;
+    vertical-align: middle;
 }
 
 #search:hover, #search:focus {
     border: 2px solid #ff681f;
+}
+
+#go {
+    /* position: relative; */
+    float: inline-end;
+    width: 13vh;
+    height: 7vh;
+    margin-left: 35px;
+    margin-top: 30px;
+    font-size: x-large;
+    background-color: #ff681f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#go:hover {
+    color: #ff681f;
+    background-color: white;
+    border: 1px solid #ff681f;
 }
 
 .select {
@@ -80,4 +102,39 @@ button {
 button:hover {
     color: #688ccb;
     background-color: white;
+}
+
+#results {
+    float: inline-end;
+    width: 89%;
+    margin-left: 200px;
+    height: 725px;
+    overflow: auto;
+}
+
+.result-table {
+    width: 100%;
+}
+  
+.mat-row .mat-cell {
+    font-size: large;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+  
+.mat-row:hover .mat-cell {
+    border-color: #688ccb;
+}
+
+th {
+    font-size: large;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(235, 235, 235);
 }
