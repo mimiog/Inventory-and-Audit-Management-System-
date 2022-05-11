@@ -17,16 +17,18 @@ import { AuditsPageComponent } from './audits-page/audits-page.component';
 import { ItemDetailsComponent } from './inventory-page/item-details/item-details.component';
 import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NewItemsComponent } from './new-items/new-items.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     AdminHomePageComponent,
     DirHomePageComponent,
     AudHomePageComponent,
     InventoryPageComponent,
     AuditsPageComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    NewItemsComponent
   ],
   imports: [
     BrowserModule,
