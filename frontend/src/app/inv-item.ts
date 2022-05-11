@@ -10,6 +10,7 @@ export class InvItem {
     category!: string;
     purchase_date!: Date;
     unit_price!: number;
+    auditable!: string;
     memo!: string;
     lifespan!: string;
     
