@@ -81,3 +81,14 @@ button:hover {
     color: #688ccb;
     background-color: white;
 }
+
+dialog {
+    width: 750px;
+    height: 700px;
+    border: gray;
+
+}
+
+h1 {
+    color: #ff681f;
+}

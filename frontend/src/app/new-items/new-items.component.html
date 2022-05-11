@@ -10,23 +10,25 @@
             </mat-sidenav>
             <mat-sidenav-content></mat-sidenav-content>
         </mat-sidenav-container>
-        <div class="container" id="searchBar">
-            <input type="search" name="search" id="search">
-            <!-- <mat-form-field class="select" appearance="fill">
-                <mat-select>
-                    <mat-option>General</mat-option>
-                    <mat-option>ID #</mat-option>
-                    <mat-option>Name</mat-option>
-                    <mat-option>Payment #</mat-option>
-                    <mat-option>Description</mat-option>
-                </mat-select>
-            </mat-form-field> -->
+        <div id="dialog" class="ui-widget">
+          <dialog open>
+            <h1>New Item</h1>
+            <form method="dialog">
+              <h3>Name</h3>
+              <input type="text">
+              <p>value</p>
+              <input type="text">
+              <p>Quantity</p>
+              <input type="text">
+              <p>Description</p>
+              <input type="text">
+              <a class="itembuttom">
+                <button>Add Items</button>
+              </a>
+            </form>
+          </dialog>
         </div>
-        <div id="results">
-            <table>
-                <!--insert results of search from database-->
-            </table>
-        </div>
+
         <footer>
             <!--display selected inventory item information-->
         </footer>
