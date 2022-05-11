@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { data } from 'cheerio/lib/api/attributes';
 import { ApiService } from '../api.service';
 import { InvItem } from '../inv-item';
 import { ItemDetailsComponent } from './item-details/item-details.component';
@@ -14,6 +15,7 @@ export interface InventoryItem {
   category: string,
   purchase_date: Date,
   unit_price: number,
+  auditable: string,
   memo: string,
   lifespan: string
 }
@@ -31,6 +33,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -45,6 +48,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -59,6 +63,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -73,6 +78,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -87,6 +93,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -101,6 +108,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -115,6 +123,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -129,6 +138,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -143,6 +153,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -157,6 +168,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -171,6 +183,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -185,6 +198,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -199,6 +213,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -213,6 +228,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -227,6 +243,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -241,10 +258,13 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   }
 ]
+
+export var clickedRow: InvItem;
 
 @Component({
   selector: 'app-inventory-page',
@@ -281,3 +301,4 @@ export class InventoryPageComponent implements OnInit {
   clickedRow = new Set<InvItem>()
 
 }
+

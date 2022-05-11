@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: 'home', component:AdminHomePageComponent },
   { path: 'inventory', component:InventoryPageComponent },
   { path: 'audits', component:AuditsPageComponent},
-  { path: 'edit', component:EditItemsComponent }
 ];
 
 @NgModule({

@@ -4,25 +4,25 @@
         <title>Inverntory</title>
     </head>
     <body>
-        <div class="container">
-            <h2>Edit Items</h2>
+        <h1 mat-dialog-title>Edit Item</h1>
+        <div mat-dialog-contenet>
         <form>
-            <label>Items Name</label> <input name= "username" type="text"  id="nameitem" required > 
-            <label>Items ID#</label> <input name= "ID" type="text"  id="nameid" required ><br>
+            <label>Name</label> <input name= "name" type="text"  id="nameitem" required > 
+            <label>ID</label> <input name= "id" type="text"  id="nameid" required ><br>
 
-            <label>Number of Items</label> <input name= "number" type = "text" id= "namenum" required>
-            <label>Entry Date</label> <input name= "Date" type="date"  id="namedate" required ><br>
+            <label>Number of Items</label> <input name= "amount" type = "text" id= "namenum" required>
+            <label>Purchase Date</label> <input name= "purchase_date" type="date"  id="namedate" required ><br>
 
             <label>Location</label> <input name = "location" type= "text" id= "nameloc" required >
-            <label>Value</label> <input name= "username" type="text"  id="value" required ><br>
+            <label>Value</label> <input name= "unit_price" type="text"  id="value" required ><br>
 
-            <label>Catagory</label> <input name ="type" type="text" id ="catagory" required> <br>
+            <label>Catagory</label> <input name ="category" type="text" id ="catagory" required> <br>
             <h4>Description</h4>
-            <label><input name ="type" type="text" id ="text" required></label>
+            <textarea name ="description" type="textbox" id ="text" rows="5" cols="200" required></textarea>
         <div>
             <button type="submit" id="delete">Delete</button>
             <button type="submit" id="save">Save</button>
-            <button type="submit" id="close">Close</button>
+            <button mat-button mat-dialog-close="close" id="close" (click)="openDialog()">Close</button>
         </div>
         </form>
         </div>

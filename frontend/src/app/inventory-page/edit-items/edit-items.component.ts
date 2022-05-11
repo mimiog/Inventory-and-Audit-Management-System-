@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { InvItem } from '../../inv-item';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ItemDetailsComponent } from '../item-details/item-details.component';
+import { clickedRow } from '../inventory-page.component';
 
 @Component({
   selector: 'app-edit-items',
@@ -7,9 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditItemsComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: InvItem,public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog() {
+    this.dialog.open(ItemDetailsComponent,{
+        data: clickedRow
+    });
   }
 
 }
