@@ -1,6 +1,6 @@
 import { BadRequestException, CanActivate, ExecutionContext, ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
-import { User } from '../../user/entities/user.entity';
+import { User } from '../../entities/user.entity';
 import { UserService } from '../../user/user.service';
 import { ROLES_KEY, UserRole } from '../roles.decorator';
 
