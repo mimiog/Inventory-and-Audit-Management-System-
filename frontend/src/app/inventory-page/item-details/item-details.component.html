@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inventory</title>
+    </head>
+    <body>
+        <h1 mat-dialog-title>Item Details</h1>
+        <div mat-dialog-content>
+            <table>
+                <tr>
+                    <td><strong>ID: </strong></td>
+                    <td id="id">{{data.id}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Name: </strong></td>
+                    <td id="name">{{data.name}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Payment Number: </strong></td>
+                    <td id="payment">{{data.payment_id}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Amount: </strong></td>
+                    <td id="amount">{{data.amount}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Department: </strong></td>
+                    <td id="department">{{data.department}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Location: </strong></td>
+                    <td id="location">{{data.location}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Description: </strong></td>
+                    <td id="description">{{data.description}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Category: </strong></td>
+                    <td id="category">{{data.category}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Purchase Date: </strong></td>
+                    <td id="date">{{data.purchase_date}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Unit Price: </strong></td>
+                    <td id="price">{{data.unit_price}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Memo: </strong></td>
+                    <td id="memo">{{data.memo}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Lifespan: </strong></td>
+                    <td id="lifespan">{{data.lifespan}}</td>
+                </tr>
+            </table>
+            <button mat-button mat-dialog-close id="close">Close</button>
+            <input type="button" name="edit" id="edit" value="Edit">
+        </div>
+    </body>
+</html>
+
