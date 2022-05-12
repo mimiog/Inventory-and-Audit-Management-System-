@@ -1,9 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { invItem } from './entities/invItem.entity';
-import { InvItemService } from './inv-item/inv-item.service';
-import { InvItemController } from './inv-item/inv-item.controller';
 import { InvItemModule } from './inv-item/inv-item.module';
 
 
@@ -20,10 +17,10 @@ import { InvItemModule } from './inv-item/inv-item.module';
       synchronize: true,
     }
     ),
-   TypeOrmModule.forFeature([invItem]),
-   InvItemModule,
+   InvItemModule
+
   ],
-  controllers: [InvItemController],
-  providers: [InvItemService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

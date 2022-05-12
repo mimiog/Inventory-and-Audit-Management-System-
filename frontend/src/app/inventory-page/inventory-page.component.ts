@@ -3,265 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 import { InvItem } from '../inv-item';
 import { ItemDetailsComponent } from './item-details/item-details.component';
-export interface InventoryItem {
-  id: number,
-  name: string,
-  payment_id: number,
-  amount: number,
-  department: string,
-  location: string,
-  description: string,
-  category: string,
-  purchase_date: Date,
-  unit_price: number,
-  auditable: string,
-  memo: string,
-  lifespan: string
-}
 
 
-var itemData: InventoryItem[] = [
-  {
-    id: 1,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable: 'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 2,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 3,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  },
-  {
-    id: 4372948,
-    name: 'string',
-    payment_id: 43298940,
-    amount: 4839,
-    department: 'string',
-    location: 'string',
-    description: 'string',
-    category: 'string',
-    purchase_date: new Date,
-    unit_price: 839243,
-    auditable:'yes',
-    memo: 'string',
-    lifespan: 'string'
-  }
+export var itemData: InvItem[] = [
+
 ]
+
 
 @Component({
   selector: 'app-inventory-page',
@@ -276,7 +23,7 @@ export class InventoryPageComponent implements OnInit {
   }
 
   searchFunc() {
-    this.apiService.readItem().subscribe((res) => {
+    this.apiService.readItems().subscribe((res) => {
       itemData = res;
     })
   }
@@ -286,6 +33,13 @@ export class InventoryPageComponent implements OnInit {
       data: this.clickedRow
     });
 
+  }
+
+  update(item: InvItem) {
+    var index = itemData.findIndex(item => {
+      item.id == item.id
+    });
+    itemData[index] = item;
   }
 
 
@@ -298,3 +52,4 @@ export class InventoryPageComponent implements OnInit {
   clickedRow = new Set<InvItem>()
 
 }
+
