@@ -2,7 +2,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { InvItemModule } from './inv-item/inv-item.module';
-
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -17,8 +17,8 @@ import { InvItemModule } from './inv-item/inv-item.module';
       synchronize: true,
     }
     ),
-   InvItemModule
-
+   InvItemModule,
+   AuthModule
   ],
   controllers: [],
   providers: [],
