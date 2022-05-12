@@ -188,7 +188,7 @@ var itemData: InventoryItem[] = [
   },
   {
     id: 4372948,
-    name: 'string',
+    name: 'Pans',
     payment_id: 43298940,
     amount: 4839,
     department: 'string',
