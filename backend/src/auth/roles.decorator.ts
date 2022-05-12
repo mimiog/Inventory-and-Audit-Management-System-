@@ -2,9 +2,10 @@ import { SetMetadata } from '@nestjs/common';
 
 export enum UserRole {
     ADMIN = "admin",
-    DIRECTOR = "director"
+    DIRECTOR = "director",
+    CLERK="clerk",
+    AUDITOR="auditor"
 }
- // change enum to your groups -- chris
 export const ROLES_KEY = 'roles';
 
 export const Roles = (...args: UserRole[]) => SetMetadata(ROLES_KEY, args);
