@@ -60,9 +60,11 @@
                     <td id="lifespan">{{data.lifespan}}</td>
                 </tr>
             </table>
-            <button mat-button mat-dialog-close id="close">Close</button>
-            <input type="button" name="edit" id="edit" value="Edit">
         </div>
+        <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close id="edit" (click)="openDialog()">Edit</button>
+            <button mat-button mat-dialog-close id="close">Close</button>
+        </mat-dialog-actions>
     </body>
 </html>
 
