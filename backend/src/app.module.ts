@@ -18,7 +18,7 @@ import { AuthModule } from './auth/auth.module';
     }
     ),
    InvItemModule,
-   AuthModule
+   //AuthModule
   ],
   controllers: [],
   providers: [],
