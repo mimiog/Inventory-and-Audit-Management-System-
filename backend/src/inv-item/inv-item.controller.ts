@@ -10,7 +10,7 @@ import { CreateInvItemDto } from 'src/dto/create-invitem.dto';
 import { UpdateInvItemDto } from 'src/dto/update-invitem.dto';
 
 
-@Controller('inv-item')
+@Controller('invItem')
 export class InvItemController {
     constructor(private invItemService: InvItemService){
       

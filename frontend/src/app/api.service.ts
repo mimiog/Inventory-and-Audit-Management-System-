@@ -8,14 +8,14 @@ import { InvItem } from './inv-item';
 export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
-  API_SERVER = "http://127.0.0.1:3000/";
+  API_SERVER = "http://127.0.0.1:3000";
 
   public readItem(name?: string, id?: number, pid?: number){
     return this.httpClient.get<InvItem>(`${this.API_SERVER}/invItem`);
   }
   
   public readItems(){
-    return this.httpClient.get<InvItem[]>(`${this.API_SERVER}/invItem`);
+    return this.httpClient.get<InvItem[]>(`${this.API_SERVER}/invItem/`);
   }
 
   public createItem(contact: InvItem){
@@ -23,7 +23,7 @@ export class ApiService {
   }
 
   public updateItem(contact: InvItem){
-    return this.httpClient.put<InvItem>(`${this.API_SERVER}/invItem/${contact.id}/update`, contact);
+    return this.httpClient.patch<InvItem>(`${this.API_SERVER}/invItem/${contact.id}/update`, contact);
   }
 
   public deleteItem(id: number){
