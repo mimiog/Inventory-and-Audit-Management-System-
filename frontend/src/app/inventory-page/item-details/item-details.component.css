@@ -1,11 +1,19 @@
 div {
-    width: 600px;
-    height: 600px;
-    font-size: large;
+    width: 500px;
+    height: max-content;
+    font-size: 13px;
+}
+
+table {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td {
-    padding: 7px;
+    padding: 6px;
 }
 
 td:nth-child(2){
@@ -13,17 +21,17 @@ td:nth-child(2){
 }
 
 button {
+    border: none;
     width: 100px;
     height: 50px;
     color: white;
-    margin-right: 20px;
-    margin-top: 20px;
-    border: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
     float: right;
     cursor: pointer;
 }
 
-input[type='button']:hover, button:hover {
+button:hover {
     opacity: 80%;
 }
 

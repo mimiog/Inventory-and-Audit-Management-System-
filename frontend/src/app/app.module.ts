@@ -14,11 +14,12 @@ import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
 import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import { AuditsPageComponent } from './audits-page/audits-page.component';
-import { EditItemsComponent } from './inventory-page/edit-items/edit-items.component';
+import { EditItemsComponent } from './inventory-page/item-details/edit-items/edit-items.component';
 import { AddItemsComponent } from './add-items/add-items.component';
 import { ItemDetailsComponent } from './inventory-page/item-details/item-details.component';
 import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSelectModule,
     FormsModule,
     RouterModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

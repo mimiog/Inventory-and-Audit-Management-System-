@@ -2,8 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { InvItem } from '../../inv-item';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { EditItemsComponent } from '../edit-items/edit-items.component';
-import { clickedRow } from '../inventory-page.component';
+import { EditItemsComponent } from './edit-items/edit-items.component';
+
 
 @Component({
   selector: 'app-item-details',
@@ -19,7 +19,7 @@ export class ItemDetailsComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(EditItemsComponent, {
-      data: clickedRow
+      data: this.data
     });
   }
   
