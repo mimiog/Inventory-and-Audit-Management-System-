@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-new-items',
   templateUrl: './new-items.component.html',
   styleUrls: ['./new-items.component.css']
 })
+
+
 export class NewItemsComponent implements OnInit {
 
   // dialogRef: MatDialogRef<any, any> | undefined ;

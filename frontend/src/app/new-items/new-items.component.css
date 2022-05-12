@@ -82,13 +82,39 @@ button:hover {
     background-color: white;
 }
 
-dialog {
-    width: 750px;
-    height: 700px;
-    border: gray;
+.container {
+    width: 500px;
+    height: 500px;
+    border: #688ccb;
+    text-align: center;
 
 }
 
 h1 {
     color: #ff681f;
+}
+
+#Nametext {
+    color: black;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
+#Valuetext {
+    color: black;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
+#Quanttext {
+    color: black;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
+#Desctext {
+    color: black;
+    width: 300px;
+    height: 60px;
+    text-align: center;
 }
