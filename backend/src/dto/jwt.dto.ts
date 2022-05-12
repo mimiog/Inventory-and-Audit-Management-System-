@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { IsDefined, IsNotEmpty, IsString } from "class-validator"
 
 export class JWTDto {

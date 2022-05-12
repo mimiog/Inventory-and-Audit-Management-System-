@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { JwtStrategy } from './strategy/jwt.strategy';
 import { PassportModule } from '@nestjs/passport';

@@ -14,6 +14,7 @@ export interface InventoryItem {
   category: string,
   purchase_date: Date,
   unit_price: number,
+  auditable: string,
   memo: string,
   lifespan: string
 }
@@ -31,6 +32,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -45,6 +47,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -59,6 +62,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -73,6 +77,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -87,6 +92,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -101,6 +107,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -115,6 +122,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -129,6 +137,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -143,6 +152,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -157,6 +167,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -171,6 +182,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -185,6 +197,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -199,6 +212,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -213,6 +227,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -227,6 +242,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -241,6 +257,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable:'yes',
     memo: 'string',
     lifespan: 'string'
   }
