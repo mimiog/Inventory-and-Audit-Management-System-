@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { MatSelectModule } from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
-import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
-import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
-import { InventoryPageComponent } from './inventory-page/inventory-page.component';
-import { AuditsPageComponent } from './audits-page/audits-page.component';
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    AdminHomePageComponent,
-    DirHomePageComponent,
-    AudHomePageComponent,
-    InventoryPageComponent,
-    AuditsPageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatInputModule,
-    MatSelectModule,
-    HttpClientModule,
-    MatSelectModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-=======
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -56,9 +14,12 @@ import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
 import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import { AuditsPageComponent } from './audits-page/audits-page.component';
+import { EditItemsComponent } from './inventory-page/item-details/edit-items/edit-items.component';
+import { AddItemsComponent } from './add-items/add-items.component';
 import { ItemDetailsComponent } from './inventory-page/item-details/item-details.component';
 import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -68,6 +29,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     AudHomePageComponent,
     InventoryPageComponent,
     AuditsPageComponent,
+    EditItemsComponent,
+    AddItemsComponent,
     ItemDetailsComponent
   ],
   imports: [
@@ -82,10 +45,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSelectModule,
     FormsModule,
     RouterModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
->>>>>>> 06c8f46499370c4e27548b5499544f1ce450c04d
