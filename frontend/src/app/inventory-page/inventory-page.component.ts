@@ -3,23 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 import { InvItem } from '../inv-item';
 import { ItemDetailsComponent } from './item-details/item-details.component';
-export interface InventoryItem {
-  id: number,
-  name: string,
-  payment_id: number,
-  amount: number,
-  department: string,
-  location: string,
-  description: string,
-  category: string,
-  purchase_date: Date,
-  unit_price: number,
-  memo: string,
-  lifespan: string
-}
 
 
-var itemData: InventoryItem[] = [
+export var itemData: InvItem[] = [
   {
     id: 1,
     name: 'string',
@@ -31,6 +17,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -45,6 +32,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -59,6 +47,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -73,6 +62,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -87,6 +77,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -101,6 +92,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -115,6 +107,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -129,6 +122,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -143,6 +137,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -157,6 +152,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -171,6 +167,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -185,6 +182,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -199,6 +197,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -213,6 +212,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -227,6 +227,7 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   },
@@ -241,10 +242,12 @@ var itemData: InventoryItem[] = [
     category: 'string',
     purchase_date: new Date,
     unit_price: 839243,
+    auditable: 'yes',
     memo: 'string',
     lifespan: 'string'
   }
 ]
+
 
 @Component({
   selector: 'app-inventory-page',
@@ -259,7 +262,7 @@ export class InventoryPageComponent implements OnInit {
   }
 
   searchFunc() {
-    this.apiService.readItem().subscribe((res) => {
+    this.apiService.readItems().subscribe((res) => {
       itemData = res;
     })
   }
@@ -269,6 +272,13 @@ export class InventoryPageComponent implements OnInit {
       data: this.clickedRow
     });
 
+  }
+
+  update(item: InvItem) {
+    var index = itemData.findIndex(item => {
+      item.id == item.id
+    });
+    itemData[index] = item;
   }
 
 
@@ -281,3 +291,4 @@ export class InventoryPageComponent implements OnInit {
   clickedRow = new Set<InvItem>()
 
 }
+

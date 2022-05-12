@@ -14,10 +14,13 @@ import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
 import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import { AuditsPageComponent } from './audits-page/audits-page.component';
+import { EditItemsComponent } from './inventory-page/item-details/edit-items/edit-items.component';
+import { AddItemsComponent } from './add-items/add-items.component';
 import { ItemDetailsComponent } from './inventory-page/item-details/item-details.component';
 import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NewItemsComponent } from './new-items/new-items.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [	
@@ -28,7 +31,10 @@ import { NewItemsComponent } from './new-items/new-items.component';
     InventoryPageComponent,
     AuditsPageComponent,
     ItemDetailsComponent,
-    NewItemsComponent
+    NewItemsComponent,
+    EditItemsComponent,
+    AddItemsComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,8 @@ import { NewItemsComponent } from './new-items/new-items.component';
     MatSelectModule,
     FormsModule,
     RouterModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
 import { AuditsPageComponent } from './audits-page/audits-page.component';
 import { NewItemsComponent } from './new-items/new-items.component';
+import { EditItemsComponent } from './inventory-page/item-details/edit-items/edit-items.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

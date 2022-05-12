@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inverntory</title>
+    </head>
+    <body>
+        <h1 mat-dialog-title>Edit Item</h1>
+        <div mat-dialog-contenet>
+        <form [formGroup]="itemForm" (ngSubmit)="onSubmit(); openDialog()">
+            <label for="name">Name</label> <input type="text" id="name" formControlName="name" required> 
+            <label for="id">ID</label> <input type="text"  id="id" formControlName="id" readonly><br>
+
+            <label for="amount">Amount</label> <input type="text" id="amount" formControlName="amount" required>
+            <label for="date">Purchase Date</label> <input type="date"  id="date" formControlName="purchase_date" required><br>
+
+            <label for="location">Location</label> <input type= "text" id="location" formControlName="location">
+            <label for="price">Value</label> <input type="text" id="price" formControlName="unit_price" required><br>
+
+            <label for="category">Category</label> <input type="text" id="category" formControlName="category" required><br>
+            <h4>Description</h4>
+            <textarea type="textbox" id="text" rows="10" cols="70" formControlName="description"></textarea>
+            
+            <div mat-dialog-actions>
+                <button id="delete">Delete</button>
+                <button type="submit" mat-dialog-close="close" id="save" [disabled]="!itemForm.valid">Save</button>
+                <button mat-button mat-dialog-close="close" (click)="openDialog()" id="close">Close</button>
+            </div>
+        </form>
+        </div>
+        
+    </body>
+</html>

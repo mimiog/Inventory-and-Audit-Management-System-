@@ -10,7 +10,11 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
   API_SERVER = "http://127.0.0.1:3000/";
 
-  public readItem(){
+  public readItem(name?: string, id?: number, pid?: number){
+    return this.httpClient.get<InvItem>(`${this.API_SERVER}/invItem`);
+  }
+  
+  public readItems(){
     return this.httpClient.get<InvItem[]>(`${this.API_SERVER}/invItem`);
   }
 
