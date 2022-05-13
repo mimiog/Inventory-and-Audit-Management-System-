@@ -21,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NewItemsComponent } from './new-items/new-items.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddnewitemComponent } from './addnewitem/addnewitem.component';
 
 @NgModule({
   declarations: [	
@@ -34,8 +35,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewItemsComponent,
     EditItemsComponent,
     AddItemsComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    AddnewitemComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

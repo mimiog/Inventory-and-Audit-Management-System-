@@ -9,13 +9,15 @@ import { InventoryPageComponent } from './inventory-page/inventory-page.componen
 import { AuditsPageComponent } from './audits-page/audits-page.component';
 import { NewItemsComponent } from './new-items/new-items.component';
 import { EditItemsComponent } from './inventory-page/item-details/edit-items/edit-items.component';
+import { AddnewitemComponent } from './addnewitem/addnewitem.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component:AdminHomePageComponent },
   { path: 'inventory', component:InventoryPageComponent },
   { path: 'audits', component:AuditsPageComponent},
-  { path: 'newitems', component:NewItemsComponent}
+  { path: 'newitems', component:NewItemsComponent},
+  { path: 'newitem', component: AddnewitemComponent},
 ];
 
 @NgModule({
