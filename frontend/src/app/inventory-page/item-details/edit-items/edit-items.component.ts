@@ -2,7 +2,6 @@ import { Component, OnInit, Inject, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { InvItem } from '../../../inv-item';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { itemData } from '../../inventory-page.component';
 import { ItemDetailsComponent } from '../item-details.component';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ApiService } from 'src/app/api.service';
@@ -49,13 +48,6 @@ export class EditItemsComponent implements OnInit {
     this.dialog.open(ItemDetailsComponent, {
       data: this.data
     });
-  }
-
-  save(id: number) {
-    var index = itemData.findIndex(item => {
-      item.id == id
-    });
-    console.log('saved')
   }
 
 }

@@ -5,10 +5,6 @@ import { InvItem } from '../inv-item';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 
 
-export var itemData: InvItem[] = [
-
-]
-
 
 @Component({
   selector: 'app-inventory-page',
@@ -20,11 +16,19 @@ export class InventoryPageComponent implements OnInit {
   constructor(private apiService: ApiService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.listFunc();
   }
 
   searchFunc() {
+    this.apiService.readItem().subscribe((res) => {
+      this.dataSource.push(res);
+    })
+  }
+
+  listFunc() {
     this.apiService.readItems().subscribe((res) => {
-      itemData = res;
+      console.log(res)
+      this.dataSource = res;
     })
   }
 
@@ -35,20 +39,13 @@ export class InventoryPageComponent implements OnInit {
 
   }
 
-  update(item: InvItem) {
-    var index = itemData.findIndex(item => {
-      item.id == item.id
-    });
-    itemData[index] = item;
-  }
-
 
   // Function to send request to backend 
     // Set itemData array to array from Get@() request
   
   // Display array in table on Inventory Page
   displayedColumns: string[] = ['id', 'name', 'amount'];
-  dataSource = itemData;
+  dataSource: InvItem[] = [];
   clickedRow = new Set<InvItem>()
 
 }
