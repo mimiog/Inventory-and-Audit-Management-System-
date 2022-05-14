@@ -1,1 +1,32 @@
-<p>add-items works!</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inventory</title>
+    </head>
+    <body>
+        <mat-sidenav-container class="nav-container">
+            <mat-sidenav class="nav-bar" opened="" mode="side">
+                <button id="home" routerLink="/home" routerLinkActive="active"><nav>Home</nav></button>
+            </mat-sidenav>
+            <mat-sidenav-content></mat-sidenav-content>
+        </mat-sidenav-container>
+        <div class="card">
+            <h1>Add New Item</h1>
+            <form [formGroup]="addItem" (ngSubmit)="onSubmit()" >
+                <label for="name">Name</label> <input type="text" id="name" formControlName="name" required> 
+                <label for="id">ID</label> <input type="text"  id="id" formControlName="id" readonly><br>
+    
+                <label for="amount">Amount</label> <input type="text" id="amount" formControlName="amount" required>
+                <label for="date">Purchase Date</label> <input type="date"  id="date" formControlName="purchase_date" required><br>
+    
+                <label for="location">Location</label> <input type= "text" id="location" formControlName="location">
+                <label for="price">Unit Price</label> <input type="text" id="price" formControlName="unit_price" required><br>
+                <label for="auditable">Auditable</label> <input type="text"  id="auditable" formControlName="auditable" readonly><br>
+                <label for="category">Category</label> <input type="text" id="category" formControlName="category" required><br>
+                <h4>Description</h4>
+                <textarea type="textbox" id="text" rows="10" cols="70" formControlName="description"></textarea>
+            </form>
+        </div>
+        <button id="add" type="submit">Add Items</button>
+    </body>
+</html>
