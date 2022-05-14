@@ -34,7 +34,9 @@ export class AddItemsComponent implements OnInit {
   }
 
   onSubmit() {
-    this.apiService.createItem(this.addItem.value)
+    var item = new InvItem();
+    item = this.addItem.value
+    this.apiService.createItem(item).subscribe();
   }
 
 }

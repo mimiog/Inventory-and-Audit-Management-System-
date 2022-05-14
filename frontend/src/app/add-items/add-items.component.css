@@ -33,9 +33,10 @@ body {
 
 .card {
     position: absolute;
-    width: 1000px;
+    width: 800px;
     margin: 220px;
     margin-top: 20px;
+    margin-left: 500px;
     background-color: white;
     padding: 40px;
     border-radius: 20px;
@@ -43,31 +44,41 @@ body {
 
 h2{
     color: #ff681f;
-    text-align: center;
+    margin-bottom: 30px;
+}
+
+h4 {
+    display: inline;
+    margin-right: 346px;
 }
 
 label {
     position: absolute;
     width: 80px;
-    height: max-content;
-    vertical-align: top;
+    height: 30px;
+    vertical-align: middle;
 }
 
 input {
     margin-bottom: 30px;
     margin-left: 80px;
-    margin-right: 20px;
-    width: 170px;
-    height: 20px;
+    margin-right: 100px;
+    width: 200px;
+    height: 30px;
     background-color: rgb(235, 235, 235);
     border: 1px solid #688CCB;
     border-radius: 3px;
+    vertical-align: middle;
 }
 
 input:focus{
     background-color: white;
     border: 1px solid #688CCB;
     border-radius: 3px;
+}
+
+#memo {
+    margin-right: 100px;
 }
 
 button:hover {
@@ -80,12 +91,12 @@ button {
     border: none;
     cursor: pointer;
     width: 100px;
-    height: 50px;
+    height: 60px;
     box-align: center;
 }
 
 #add {
     background-color: #ff681f;
-    margin-top: 650px;
-    margin-left: 1200px;
+    float: right;
+    text-align: center;
 }
