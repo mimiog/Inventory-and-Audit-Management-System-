@@ -48,8 +48,9 @@ export class EditItemsComponent implements OnInit {
     var del = confirm("This action is irreversible. Are you sure you want to proceed?");
     if (del) {
       this.apiService.deleteItem(this.data.id).subscribe();
-      alert("Item Deleted!")
-      this.dialog.closeAll()
+      alert("Item Deleted!");
+      this.dialog.closeAll();
+      window.location.reload();
     }
     
   }
