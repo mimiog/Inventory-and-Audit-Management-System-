@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Input } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogClose } from '@angular/material/dialog';
 import { InvItem } from '../../../inv-item';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ItemDetailsComponent } from '../item-details.component';
@@ -41,8 +41,16 @@ export class EditItemsComponent implements OnInit {
     this.apiService.updateItem(this.data).subscribe()
   }
 
-  change(id: string) {
-    return (<HTMLInputElement>document.getElementById(id)).value
+
+
+  delete() {
+    var del = confirm("This action is irreversible. Are you sure you want to proceed?");
+    if (del) {
+      this.apiService.deleteItem(this.data.id).subscribe();
+      alert("Item Deleted!")
+      this.dialog.closeAll()
+    }
+    
   }
 
   openDialog() {

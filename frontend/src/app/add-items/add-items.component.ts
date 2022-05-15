@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { InvItem } from '../inv-item';
+import { NewItem } from '../new-item';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -15,18 +15,17 @@ export class AddItemsComponent implements OnInit {
 
 
   addItem = new FormGroup({
-    id: new FormControl(),
     name: new FormControl(),
     payment_id: new FormControl(),
     amount: new FormControl(),
     department: new FormControl(),
     location: new FormControl(),
-    description: new FormControl(),
+    description: new FormControl(''),
     category: new FormControl(),
     purchase_date: new FormControl(),
     unit_price: new FormControl(),
     auditable: new FormControl(),
-    memo: new FormControl(),
+    memo: new FormControl(''),
     lifespan: new FormControl()
   })
 
@@ -34,9 +33,12 @@ export class AddItemsComponent implements OnInit {
   }
 
   onSubmit() {
-    var item = new InvItem();
-    item = this.addItem.value
+    var item = new NewItem();
+    item = this.addItem.value;
     this.apiService.createItem(item).subscribe();
+    console.log("Submitted!");
+    alert("New Item Created!");
+    this.addItem.reset();
   }
 
 }

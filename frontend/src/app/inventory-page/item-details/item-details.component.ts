@@ -22,6 +22,7 @@ export class ItemDetailsComponent implements OnInit {
       data: this.data
     });
   }
-  
+
+  newnew = this.data;
 
 }

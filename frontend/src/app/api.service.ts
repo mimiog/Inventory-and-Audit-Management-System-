@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { InvItem } from './inv-item';
+import { NewItem } from './new-item';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +19,8 @@ export class ApiService {
     return this.httpClient.get<InvItem[]>(`${this.API_SERVER}/invItem/`);
   }
 
-  public createItem(contact: InvItem){
-    return this.httpClient.post<InvItem>(`${this.API_SERVER}/invItem/create`, contact);
+  public createItem(contact: NewItem){
+    return this.httpClient.post<NewItem>(`${this.API_SERVER}/invItem/create`, contact);
   }
 
   public updateItem(contact: InvItem){

@@ -21,7 +21,7 @@
             <textarea type="textbox" id="text" rows="10" cols="70" formControlName="description"></textarea>
             
             <div mat-dialog-actions>
-                <button id="delete">Delete</button>
+                <button type="button" id="delete" (click)="delete();">Delete</button>
                 <button type="submit" mat-dialog-close="close" id="save" [disabled]="!itemForm.valid">Save</button>
                 <button mat-button mat-dialog-close="close" (click)="openDialog()" id="close">Close</button>
             </div>

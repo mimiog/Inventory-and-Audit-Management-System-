@@ -22,16 +22,17 @@ body {
     background: white;
 }
 
-#home {
+#home, #add {
     width: 200px;
     height: 75px;
     margin: 0;
+    margin-bottom: 5px;
     border-radius: 0;
     background-color: #ff681f;
     font-size: 200%;
 }
 
-#home:hover {
+#home:hover, #add:hover {
     color: #ff681f;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

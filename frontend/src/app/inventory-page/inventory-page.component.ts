@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { DataSource } from '@angular/cdk/collections';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 import { InvItem } from '../inv-item';
 import { ItemDetailsComponent } from './item-details/item-details.component';
-
-
 
 @Component({
   selector: 'app-inventory-page',
