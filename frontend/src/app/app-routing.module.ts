@@ -2,19 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
-import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
-import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
-import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
-import { AuditsPageComponent } from './audits-page/audits-page.component';
-import { EditItemsComponent } from './inventory-page/item-details/edit-items/edit-items.component';
 import { AddItemsComponent } from './add-items/add-items.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component:AdminHomePageComponent },
+  { path: 'home', component:HomePageComponent },
   { path: 'inventory', component:InventoryPageComponent },
-  { path: 'audits', component:AuditsPageComponent},
   { path: 'add', component:AddItemsComponent}
 ];
 

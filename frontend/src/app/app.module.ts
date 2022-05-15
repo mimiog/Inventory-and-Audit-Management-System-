@@ -9,11 +9,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
-import { DirHomePageComponent } from './dir-home-page/dir-home-page.component';
-import { AudHomePageComponent } from './aud-home-page/aud-home-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 import { InventoryPageComponent } from './inventory-page/inventory-page.component';
-import { AuditsPageComponent } from './audits-page/audits-page.component';
 import { EditItemsComponent } from './inventory-page/item-details/edit-items/edit-items.component';
 import { AddItemsComponent } from './add-items/add-items.component';
 import { ItemDetailsComponent } from './inventory-page/item-details/item-details.component';
@@ -24,11 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    AdminHomePageComponent,
-    DirHomePageComponent,
-    AudHomePageComponent,
+    HomePageComponent,
     InventoryPageComponent,
-    AuditsPageComponent,
     EditItemsComponent,
     AddItemsComponent,
     ItemDetailsComponent
