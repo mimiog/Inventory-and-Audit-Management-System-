@@ -8,6 +8,7 @@
             <mat-sidenav class="nav-bar" opened="" mode="side">
                 <button id="home" routerLink="/home" routerLinkActive="active"><nav>Home</nav></button>
                 <button id="add" routerLink="/add" routerLinkActive="active"><nav>Add Item</nav></button>
+                <div class="footer">Remaining Value: {{remVal()}}</div>
             </mat-sidenav>
             <mat-sidenav-content></mat-sidenav-content>
         </mat-sidenav-container>

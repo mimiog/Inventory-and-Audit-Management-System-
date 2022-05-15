@@ -31,6 +31,14 @@ export class InventoryPageComponent implements OnInit {
     })
   }
 
+  remVal() {
+    var sum = 0;
+    this.dataSource.forEach(item => {
+      sum = sum + item.amount;
+    });
+    return sum;
+  }
+
   openDialog() {
     this.dialog.open(ItemDetailsComponent, {
       data: this.clickedRow
