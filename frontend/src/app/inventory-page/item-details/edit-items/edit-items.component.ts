@@ -39,6 +39,7 @@ export class EditItemsComponent implements OnInit {
     console.warn(this.itemForm.value);
     this.data = this.itemForm.value;
     this.apiService.updateItem(this.data).subscribe()
+    window.location.reload();
   }
 
 
