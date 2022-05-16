@@ -23,7 +23,7 @@ export class InventoryPageComponent implements OnInit {
     search: new FormControl
   });
 
-  // Search inventory for one item
+  // Search inventory for items by ID or name
   searchFunc() {
     this.apiService.readItems().subscribe((res) => {
       this.dataSource = [];
@@ -35,6 +35,7 @@ export class InventoryPageComponent implements OnInit {
     });
   }
 
+  // Function to list all items in inventory
   listFunc() {
     this.apiService.readItems().subscribe((res) => {
       console.log(res)
@@ -42,6 +43,7 @@ export class InventoryPageComponent implements OnInit {
     })
   }
 
+  // Calculate remaining value
   remVal() {
     var sum = 0;
     this.dataSource.forEach(item => {
@@ -50,6 +52,7 @@ export class InventoryPageComponent implements OnInit {
     return sum;
   }
 
+  // View an item's details
   openDialog() {
     this.dialog.open(ItemDetailsComponent, {
       data: this.clickedRow
@@ -57,11 +60,6 @@ export class InventoryPageComponent implements OnInit {
 
   }
 
-
-  // Function to send request to backend 
-    // Set itemData array to array from Get@() request
-  
-  // Display array in table on Inventory Page
   displayedColumns: string[] = ['id', 'name', 'amount'];
   dataSource: InvItem[] = [];
   clickedRow = new Set<InvItem>();
