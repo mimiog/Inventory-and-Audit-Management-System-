@@ -1,5 +1,5 @@
-import { DataSource } from '@angular/cdk/collections';
 import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 import { InvItem } from '../inv-item';
@@ -15,13 +15,24 @@ export class InventoryPageComponent implements OnInit {
   constructor(private apiService: ApiService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    // Show all items in inventory on initialization
     this.listFunc();
   }
+  
+  searchForm = new FormGroup ({
+    search: new FormControl
+  });
 
+  // Search inventory for one item
   searchFunc() {
-    this.apiService.readItem().subscribe((res) => {
-      this.dataSource.push(res);
-    })
+    this.apiService.readItems().subscribe((res) => {
+      this.dataSource = [];
+      res.forEach(item => {
+        if (item.name.toLowerCase().includes(this.searchForm.value.search) || item.id == this.searchForm.value.search) {
+          this.dataSource.push(item);
+        }
+      });
+    });
   }
 
   listFunc() {
@@ -53,7 +64,6 @@ export class InventoryPageComponent implements OnInit {
   // Display array in table on Inventory Page
   displayedColumns: string[] = ['id', 'name', 'amount'];
   dataSource: InvItem[] = [];
-  clickedRow = new Set<InvItem>()
-
+  clickedRow = new Set<InvItem>();
 }
 

@@ -13,8 +13,10 @@
             <mat-sidenav-content></mat-sidenav-content>
         </mat-sidenav-container>
         <div class="container" id="searchBar">
-            <input type="search" name="search" id="search">
-            <input type="button" name="go" id="go" value="Search" (click)="searchFunc()">
+            <form [formGroup]="searchForm">
+                <input type="search" name="search" id="search" formControlName="search">
+                <button type="submit" name="go" id="go" (click)="searchFunc()">Search</button>
+            </form>
         </div>
         <div id="results">
             <table mat-table [dataSource]="dataSource" class="result-table">
