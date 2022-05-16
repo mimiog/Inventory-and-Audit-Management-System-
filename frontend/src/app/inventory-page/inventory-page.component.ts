@@ -28,7 +28,7 @@ export class InventoryPageComponent implements OnInit {
     this.apiService.readItems().subscribe((res) => {
       this.dataSource = [];
       res.forEach(item => {
-        if (item.name.toLowerCase().includes(this.searchForm.value.search) || item.id == this.searchForm.value.search) {
+        if ((item.name.toLowerCase()+ " ").includes(this.searchForm.value.search) || item.id == this.searchForm.value.search) {
           this.dataSource.push(item);
         }
       });
