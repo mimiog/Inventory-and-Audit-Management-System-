@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { NewItem } from '../new-item';
 import { ApiService } from 'src/app/api.service';
 
@@ -27,7 +27,7 @@ export class AddItemsComponent implements OnInit {
     auditable: new FormControl(),
     memo: new FormControl(''),
     lifespan: new FormControl()
-  })
+  }, { updateOn: 'submit' });
 
   ngOnInit(): void {
   }
@@ -35,10 +35,16 @@ export class AddItemsComponent implements OnInit {
   onSubmit() {
     var item = new NewItem();
     item = this.addItem.value;
-    this.apiService.createItem(item).subscribe();
-    console.log("Submitted!");
-    alert("New Item Created!");
-    this.addItem.reset();
+    console.log(item);
+    if (this.addItem.valid) {
+      this.apiService.createItem(item).subscribe();
+      console.log("Submitted!");
+      alert("New Item Created!");
+      this.addItem.reset();
+    } else {
+      alert("Please use valid input.");
+    }
+    
   }
 
 }

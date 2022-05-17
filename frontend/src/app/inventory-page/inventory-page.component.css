@@ -118,8 +118,8 @@ button:hover {
     float: inline-end;
     width: 89%;
     margin-left: 200px;
-    height: max-content;
-    overflow-y: auto;
+    height: 615px;
+    overflow: auto;
 }
 
 .result-table {
@@ -135,10 +135,6 @@ button:hover {
   
 .mat-row:hover .mat-cell {
     border-color: #688ccb;
-}
-
-.mat-header-row {
-    position: sticky;
 }
 
 th {

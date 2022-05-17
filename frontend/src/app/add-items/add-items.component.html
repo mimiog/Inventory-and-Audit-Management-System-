@@ -18,21 +18,21 @@
                     <label for="name">Name</label> <input type="text" id="name" formControlName="name" required><br>
                     <label for="category">Category</label> <input type="text" id="category" formControlName="category" required><br>
                     <label for="department">Department</label> <input type="text" id="department" formControlName="department" required><br>
-                    <label for="amount">Amount</label> <input type="text" id="amount" formControlName="amount" required><br>
+                    <label for="amount">Amount</label> <input type="number" id="amount" formControlName="amount" required><br>
                     <label for="date">Purchase Date</label> <input type="date"  id="date" formControlName="purchase_date" required><br>
                     <h4>Description</h4>
                     <textarea type="textbox" id="desc" rows="5" cols="55" formControlName="description"></textarea><br>
                 </div>
                 <div id="right">
-                    <label for="payment">Payment ID</label> <input type="text"  id="payment" formControlName="payment_id" required><br>
-                    <label for="price">Unit Price</label> <input type="text" id="price" formControlName="unit_price" required><br>
+                    <label for="payment">Payment ID</label> <input type="number"  id="payment" formControlName="payment_id" required><br>
+                    <label for="price">Unit Price</label> <input type="number" id="price" formControlName="unit_price" required><br>
                     <label for="location">Location</label> <input type= "text" id="location" formControlName="location"><br>
                     <label for="auditable">Auditable</label> <input type="text"  id="auditable" formControlName="auditable" required><br>
-                    <label for="lifespan">Lifespan</label> <input type="text"  id="lifespan" formControlName="lifespan" required><br>
+                    <label for="lifespan">Lifespan</label> <input type="number"  id="lifespan" formControlName="lifespan" required><br>
                     <h4>Memo</h4>
                     <textarea type="textbox" id="memo" rows="5" cols="55" formControlName="memo"></textarea><br>
                 </div><br>
-                <button type="submit" id="add" [disabled]="!addItem.valid">Add Item</button>
+                <button type="submit" id="add">Add Item</button>
             </form>
         </div>
         
